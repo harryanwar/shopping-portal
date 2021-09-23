@@ -24,7 +24,7 @@ pipeline {
 
     stage('archive-the-app') {
       steps {
-        archiveArtifacts '**/distribution/*.zip'
+        archiveArtifacts(artifacts: '**/distribution/*.zip', allowEmptyArchive: true)
       }
     }
 
